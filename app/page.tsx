@@ -66,6 +66,7 @@ export default function home() {
         <li>株式会社オプテージ株式会社</li>
         <li>近鉄ケーブルネットワーク株式会社</li>
         <li>さくらインターネット株式会社</li>
+        <li>JR西日本光ネットワーク株式会社</li>
         <li>株式会社 JPIX</li>
         <li>セイコーソリューションズ株式会社</li>
         <li>株式会社 ZTV</li>
