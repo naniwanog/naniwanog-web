@@ -74,6 +74,9 @@ export default function home() {
         <li>BBIX 株式会社</li>
         <li>ビー・ビー・バックボーン株式会社</li>
       </ul>
+      <ul>
+        <li>onabe3 - mitarai</li>
+      </ul>
     </div>
   );
 }
