@@ -77,6 +77,7 @@ export default function home() {
       <h3>Powered by</h3>
       <ul>
         <li>yuzamme</li>
+        <li>mitarai</li>
       </ul>
     </div>
   );
