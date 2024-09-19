@@ -13,7 +13,9 @@ export default function home() {
       </p>
       <h2>NaniwaNOG 2 Meeting in Himeji 開催概要</h2>
       <p>参加登録はこちら</p>
-      <a href="https://naniwanog2.peatix.com/">https://naniwanog2.peatix.com/</a>
+      <a href="https://naniwanog2.peatix.com/">
+        https://naniwanog2.peatix.com/
+      </a>
       <h3>本会議</h3>
       <p>
         日時：2024年10月10日(木) 13:00 ～ 18:00
@@ -73,6 +75,12 @@ export default function home() {
         <li>株式会社ネットアイアールディー</li>
         <li>BBIX 株式会社</li>
         <li>ビー・ビー・バックボーン株式会社</li>
+      </ul>
+      <h3>Powered by</h3>
+      <ul>
+        <li>yuzamme</li>
+        <li>mitarai</li>
+        <li>murakuki</li>
       </ul>
     </div>
   );
