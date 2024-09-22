@@ -81,7 +81,7 @@ export default function home() {
         <li>yuzamme</li>
         <li>mitarai</li>
         <li>murakuki</li>
-        <li>nnnnnnrum</li>
+        <li>nnnnnnnnnke</li>
       </ul>
     </div>
   );
