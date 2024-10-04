@@ -27,7 +27,8 @@ const data = {
         { id: "23", name: "丸岡 哲也", company: "近畿大学", role: "NOC" },
         { id: "24", name: "御手洗 匠", company: "ECCコンピュータ専門学校", role: "NOC" },
         { id: "25", name: "柏崎 礼生", company: "近畿大学情報学部情報学科 准教授 ", role: "NOC見守り" },
-        { id: "26", name: "佐々木 建", company: "所属なし", role: "NOC見守り" }
+        { id: "26", name: "佐々木 建", company: "所属なし", role: "NOC見守り" },
+        { id: "27", name: "芝村 正志", company: "株式会社シナプス", role:"NOC見守り"}
     ]
 };
 
