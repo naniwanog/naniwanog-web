@@ -76,6 +76,7 @@ export default function home() {
         <li>BBIX 株式会社</li>
         <li>ビー・ビー・バックボーン株式会社</li>
       </ul>
+
       <h3>Powered by</h3>
       <ul>
         <li>yuzamme</li>
