@@ -1,38 +1,42 @@
 // import styles from "./page.module.css";
+import "./globals.css";
+import type {} from "next/app";
 
 export default function home() {
   return (
     <div>
-      <h1>Naniwa Network Operators Group</h1>
-      <h2>About NaniwaNOG</h2>
+      <h1 className="text-2xl font-bold">Naniwa Network Operators Group</h1>
+      <h2 className="text-2xl">About NaniwaNOG</h2>
       <p>
         NaniwaNOG(Naniwa Network Operators
         Group)は、インターネットにおける技術的事項、運用に関する事項を議論、検討、紹介することを通して関西地域の技術者および利用者に貢献することを目的としたグループです。
         <br />
         議論や情報提供の場として年間1回程度一堂に会する場としてのミーティングを開催しています。
       </p>
-      <h2>NaniwaNOG 2 Meeting in Himeji 開催概要</h2>
-      <p>参加登録はこちら</p>
-      <a href="https://naniwanog2.peatix.com/">
+      <h2 className="font-bold p-4">NaniwaNOG 2 Meeting in Himeji 開催概要</h2>
+      <p className="px-4">参加登録はこちら</p>
+      <a href="https://naniwanog2.peatix.com/" className="underline px-4">
         https://naniwanog2.peatix.com/
       </a>
-      <h3>本会議</h3>
-      <p>
+      <h3 className="font-bold px-4">本会議</h3>
+      <p className="px-4">
         日時：2024年10月10日(木) 13:00 ～ 18:00
         <br />
         会場：イーグレひめじ あいめっせホール
         <br />
         〒670-0012 兵庫県姫路市本町６８−２９０
       </p>
-      <h3>懇親会</h3>
-      <p>
+      <br />
+      <h3 className="font-bold px-4">懇親会</h3>
+      <p className="px-4">
         日時：18:30 〜<br />
         会場：姫路モノリス
         <br />
         会費：4950円(税込み)
       </p>
-      <h3>タイムテーブル</h3>
-      <p>
+      <br />
+      <h3 className="font-bold text-left px-4">タイムテーブル</h3>
+      <p className="text-left px-4">
         13:00 ～ 13:10 　開会挨拶、会場案内(10分)
         <br />
         13:10 ～ 13:35 　災害プログラム1(仮)(25分)
@@ -58,8 +62,9 @@ export default function home() {
         <br />
         17:50 ～ 18:00 　閉会宣言・次回予告・懇親会連絡(10分)
       </p>
-      <h3>協賛(五十音順)</h3>
-      <ul>
+      <br />
+      <h3 className="font-bold text-left px-4">協賛(五十音順)</h3>
+      <ul className="text-left px-4">
         <li>アルテリア・ネットワークス株式会社</li>
         <li>インターネットマルチフィード株式会社</li>
         <li>エクイニクス・ジャパン株式会社</li>
@@ -76,8 +81,9 @@ export default function home() {
         <li>BBIX 株式会社</li>
         <li>ビー・ビー・バックボーン株式会社</li>
       </ul>
-      <h3>Powered by</h3>
-      <ul>
+      <br />
+      <h3 className="text-left px-4">Powered by</h3>
+      <ul className="text-left px-4">
         <li>yuzamme</li>
         <li>mitarai</li>
         <li>murakuki</li>
