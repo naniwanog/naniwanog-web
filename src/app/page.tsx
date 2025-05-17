@@ -13,7 +13,7 @@ export default function home() {
       </p>
       <h2>NaniwaNOG 2 Meeting in Himeji 開催概要</h2>
       <p>参加登録はこちら</p>
-      <a href="https://naniwanog2.peatix.com/">
+      <a href='https://naniwanog2.peatix.com/'>
         https://naniwanog2.peatix.com/
       </a>
       <h3>本会議</h3>
@@ -85,5 +85,5 @@ export default function home() {
         <li>nnnnnnnnnke</li>
       </ul>
     </div>
-  );
+  )
 }
