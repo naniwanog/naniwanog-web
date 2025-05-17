@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation'
 
 const navigation = [
     { name: '概要', href: 'about' },
-    { name: '次回開催', href: 'next' },
+    { name: '次回開催', href: 'upcoming' },
     { name: '過去の開催', href: 'last' },
     { name: 'スタッフ', href: 'staff' },
     { name: 'Shirankedo', href: 'shirankedo' },

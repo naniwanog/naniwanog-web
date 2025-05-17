@@ -1,4 +1,8 @@
-// import styles from "./page.module.css";
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "概要"
+}
 
 export default function home() {
   return (
