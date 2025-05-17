@@ -1,89 +1,140 @@
-// import styles from "./page.module.css";
+'use client'
 
-export default function home() {
+import { useState } from 'react'
+import { Dialog, DialogPanel } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import Image from 'next/image'
+import Link from 'next/link'
+
+const navigation = [
+  { name: '概要', href: '#' },
+  { name: '次回開催', href: '#' },
+  { name: '過去の開催', href: '#' },
+  { name: 'スタッフ', href: '#' },
+  { name: 'Shirankedo', href: '#' },
+]
+
+export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const naniwaNogIcon = (
+    <Link href={"/"}>
+      <Image
+        src="/favicon.ico"
+        alt="naniwa nog icon"
+        width={48}
+        height={48}
+        className="-m-1.5"
+      />
+    </Link>
+  )
+
   return (
-    <div>
-      <h1>Naniwa Network Operators Group</h1>
-      <h2>About NaniwaNOG</h2>
-      <p>
-        NaniwaNOG(Naniwa Network Operators
-        Group)は、インターネットにおける技術的事項、運用に関する事項を議論、検討、紹介することを通して関西地域の技術者および利用者に貢献することを目的としたグループです。
-        <br />
-        議論や情報提供の場として年間1回程度一堂に会する場としてのミーティングを開催しています。
-      </p>
-      <h2>NaniwaNOG 2 Meeting in Himeji 開催概要</h2>
-      <p>参加登録はこちら</p>
-      <a href='https://naniwanog2.peatix.com/'>
-        https://naniwanog2.peatix.com/
-      </a>
-      <h3>本会議</h3>
-      <p>
-        日時：2024年10月10日(木) 13:00 ～ 18:00
-        <br />
-        会場：イーグレひめじ あいめっせホール
-        <br />
-        〒670-0012 兵庫県姫路市本町６８−２９０
-      </p>
-      <h3>懇親会</h3>
-      <p>
-        日時：18:30 〜<br />
-        会場：姫路モノリス
-        <br />
-        会費：4950円(税込み)
-      </p>
-      <h3>タイムテーブル</h3>
-      <p>
-        13:00 ～ 13:10 　開会挨拶、会場案内(10分)
-        <br />
-        13:10 ～
-        13:35　NTT西日本における災害時の現場対応と、ネットワーク視える化ツールの能登半島地震での予測と実績(25分)
-        <br />
-        13:35 ～ 14:00 　自然災害オープンマイク(25分)
-        <br />
-        14:00 ～ 14:15 　休憩(15分)
-        <br />
-        14:15 ～ 14:40 　 BAKUCHIKU と Team Shirankedo
-        イベントネットワーク徒然(25分)
-        <br />
-        14:40 ～ 15:30 　若手セッション 2024(50分)
-        <br />
-        15:30 ～ 15:45 　休憩(15分)
-        <br />
-        15:45 ～ 16:00 　告知タイム(15分)
-        <br />
-        16:00 ～ 16:45 　東西の AS を分ける？分けない？(45分)
-        <br />
-        16:45 ～ 17:00 　休憩(15分)
-        <br />
-        17:00 ～ 17:50 　夏の熱戦を届ける「バーチャル高校野球」の舞台裏(50分)
-        <br />
-        17:50 ～ 18:00 　閉会宣言・次回予告・懇親会連絡(10分)
-      </p>
-      <h3>協賛(五十音順)</h3>
-      <ul>
-        <li>アルテリア・ネットワークス株式会社</li>
-        <li>インターネットマルチフィード株式会社</li>
-        <li>エクイニクス・ジャパン株式会社</li>
-        <li>NTT スマートコネクト株式会社</li>
-        <li>MC デジタル・リアリティ株式会社</li>
-        <li>株式会社オプテージ株式会社</li>
-        <li>近鉄ケーブルネットワーク株式会社</li>
-        <li>さくらインターネット株式会社</li>
-        <li>JR西日本光ネットワーク株式会社</li>
-        <li>株式会社 JPIX</li>
-        <li>セイコーソリューションズ株式会社</li>
-        <li>株式会社 ZTV</li>
-        <li>株式会社ネットアイアールディー</li>
-        <li>BBIX 株式会社</li>
-        <li>ビー・ビー・バックボーン株式会社</li>
-      </ul>
-      <h3>Powered by</h3>
-      <ul>
-        <li>yuzamme</li>
-        <li>mitarai</li>
-        <li>murakuki</li>
-        <li>nnnnnnnnnke</li>
-      </ul>
+    <div className="bg-white">
+      <header className="fixed inset-x-0 pb-2 top-0 z-50 bg-white/70 backdrop-blur">
+        {/* For PC */}
+        <div className="mx-auto max-w-7xl">
+          <div className="px-6 pt-6 lg:max-w-2xl lg:pl-8 lg:pr-0">
+            <nav aria-label="Global" className="flex items-center justify-between lg:justify-start">
+              {naniwaNogIcon}
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen(true)}
+                className="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden"
+              >
+                <span className="sr-only">Open main menu</span>
+                <Bars3Icon aria-hidden="true" className="size-6" />
+              </button>
+              <div className="hidden lg:ml-12 lg:flex lg:gap-x-14">
+                {navigation.map((item) => (
+                  <Link key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-900">
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        {/* For mobile */}
+        <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
+          <div className="fixed inset-0 z-50" />
+          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div className="flex items-center justify-between">
+              {naniwaNogIcon}
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen(false)}
+                className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              >
+                <span className="sr-only">Close menu</span>
+                <XMarkIcon aria-hidden="true" className="size-6" />
+              </button>
+            </div>
+            <div className="mt-6 flow-root">
+              <div className="-my-6 divide-y divide-gray-500/10">
+                <div className="space-y-2 py-6">
+                  {navigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </DialogPanel>
+        </Dialog>
+
+      </header>
+
+      <div className="relative">
+        <div className="mx-auto max-w-7xl">
+          <div className="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
+            <svg
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+              className="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-white lg:block"
+            >
+              <polygon points="0,0 90,0 50,100 0,100" />
+            </svg>
+
+            <div className="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
+              <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
+                <h1 className="text-pretty text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
+                  Naniwa NOG
+                </h1>
+                <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
+                  インターネットにおける技術的事項を議論・検討・紹介することで、
+                  <span className='text-yellow-600'>関西地域</span>のネットワーク運用者および利用者に貢献することを目的とします。
+                  そのための場として、年1回一堂に会するミーティングを開催しています。
+                </p>
+                <div className="mt-10 flex items-center gap-x-6">
+                  <Link
+                    href="next"
+                    className="rounded-md bg-yellow-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
+                  >
+                    次回開催概要 <span aria-hidden="true">&rarr;</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+          <Image
+            src="/top.jpg"
+            alt="naniwa top"
+            width={3465}
+            height={1795}
+            className="aspect-[3/2] object-cover lg:aspect-auto lg:size-full blur-xs"
+          />
+        </div>
+      </div>
     </div>
   )
 }
