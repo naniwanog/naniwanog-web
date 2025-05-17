@@ -1,0 +1,22 @@
+# Visual Studio Code
+.vscode/
+
+# dotfile
+.env*
+
+# markdown
+*.md
+
+# next.js
+**/node_modules/
+**/.next/
+public/
+
+# production
+build/
+
+# config
+.*lintrc.js
+
+# lockfile
+package-lock.json

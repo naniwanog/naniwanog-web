@@ -3,15 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "preinstall": "npx only-allow npm",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "lint-staged": "lint-staged",
+    "format": "prettier --write .",
+    "prepare": "husky"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.7",
     "next": "15.3.2",
+    "postcss": "^8.5.3",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "tailwindcss": "^4.1.7"
   },
   "devDependencies": {
     "@types/node": "^22.15.18",
@@ -19,10 +27,20 @@
     "@types/react-dom": "19.1.5",
     "eslint": "^9.27.0",
     "eslint-config-next": "15.3.2",
+    "eslint-config-prettier": "^10.1.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "typescript": "^5.8.3"
   },
-  "overrides": {
-    "@types/react": "19.1.4",
-    "@types/react-dom": "19.1.5"
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "npm run lint",
+      "npm run format",
+      "npm run lint:fix",
+      "npm run check-types",
+      "prettier --write --ignore-unknown"
+    ]
   }
 }
