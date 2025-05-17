@@ -1,4 +1,5 @@
 import { FlatCompat } from '@eslint/eslintrc'
+import { globalIgnores } from "eslint/config";
 
 const compat = new FlatCompat({
   // import.meta.dirname is available after Node.js v20.11.0
@@ -15,6 +16,14 @@ const eslintConfig = [
       'prettier',
     ],
   }),
+  globalIgnores([
+    "**/node_modules/",
+    "**/.next/",
+    "**/build/",
+    "**/build/**/*",
+    "public/",
+    "**/public/"
+	]),
 ]
 
 export default eslintConfig
