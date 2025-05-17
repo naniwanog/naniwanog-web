@@ -18,7 +18,7 @@ export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="fixed inset-x-0 pb-2 top-0 z-50 bg-white/70 backdrop-blur">
+        <header className="fixed inset-x-0 pb-6 top-0 z-50 bg-orange-100/70 backdrop-blur">
             {/* For PC */}
             <div className="mx-auto max-w-7xl">
                 <div className="px-6 pt-6 lg:max-w-2xl lg:pl-8 lg:pr-0">
@@ -47,8 +47,7 @@ export default function Header() {
             <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
                 <div className="fixed inset-0 z-50" />
                 <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-                    <div className="flex items-center justify-between">
-                        <NaniwaNogIcon />
+                    <div className="flex items-center justify-end">
                         <button
                             type="button"
                             onClick={() => setMobileMenuOpen(false)}
