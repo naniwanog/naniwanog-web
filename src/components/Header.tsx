@@ -5,6 +5,7 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import NaniwaNogIcon from '@/components/Icon'
+import { usePathname } from 'next/navigation'
 
 const navigation = [
     { name: '概要', href: 'about' },
@@ -16,9 +17,13 @@ const navigation = [
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const pathname = usePathname()
+    const isHome = pathname === '/'
 
     return (
-        <header className="fixed inset-x-0 pb-6 top-0 z-50 bg-orange-100/70 backdrop-blur">
+        <header className={`${isHome ? 'fixed' : ''
+            } inset-x-0 pb-6 top-0 z-50 bg-orange-100/70 backdrop-blur`}>
+
             {/* For PC */}
             <div className="mx-auto max-w-7xl">
                 <div className="px-6 pt-6 lg:max-w-2xl lg:pl-8 lg:pr-0">

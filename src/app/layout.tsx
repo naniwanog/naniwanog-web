@@ -1,14 +1,30 @@
 import type { Metadata } from 'next'
-import './globals.css'
+import Header from '@/components/Header'
+import '@/app/globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://naniwanog.jp'),
   title: {
-    template: '%s | NaniwaNOG',
     default: 'NaniwaNOG',
+    template: '%s | NaniwaNOG',
   },
-  description:
-    'NaniwaNOGとは、Naniwa Network Operators\' Groupを意味し、インターネットに於ける技術的事項、および、それにまつわるオペレーションに関する事項を議論、検討、紹介することにより関西エリアを中心としたインターネット技術者、および、利用者に貢献することを目的としたグループです。',
+  description: 'NaniwaNOGとは、Naniwa Network Operators\' Groupを意味します。インターネットにおける技術的事項を議論することで、関西地域のネットワーク運用者および利用者に貢献することを目的とします。',
+  openGraph: {
+    title: 'NaniwaNOG',
+    description: 'NaniwaNOGとは、Naniwa Network Operators\' Groupを意味します。インターネットにおける技術的事項を議論することで、関西地域のネットワーク運用者および利用者に貢献することを目的とします。',
+    url: 'https://naniwanog.jp',
+    siteName: 'NaniwaNOG',
+    images: [
+      {
+        url: 'https://naniwanog.jp/ogp.png',
+        width: 1200,
+        height: 630,
+        alt: 'NaniwaNOG Logo',
+      },
+    ],
+    locale: 'ja-JP',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({
@@ -19,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang='ja'>
       <body>
+        <Header />
         {children}
       </body>
     </html>
