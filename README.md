@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+本リポジトリは、NaniwaNOGのホームページ ( https://naniwanog.jp/ ) 用です。
 
-## Getting Started
+## 始め方
+1. バージョン管理ツールとして`asdf`をPCにインストールし、設定する。
+   - https://asdf-vm.com/guide/getting-started.html
+   - `.tool-versions`に記載されているバージョンをインストールする。
+2. 以下コマンドで開発サーバーが立ち上がる
+   ```bash
+   # asdf経由でnodeがインストールされている前提
+   npm install
+   npm run dev
+   ```
+3. ブラウザで [http://localhost:3000](http://localhost:3000) にアクセスする。
 
-First, run the development server:
+## 使用ライブラリについて
+- cssには[tailwindcss](https://tailwindcss.com/)を使用。
+- linterやprettierも使用。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## デプロイまわりメモ
+- CloudflareのWorkersでデプロイしている
+  - アカウントは`yuzamme`
+  - 無料枠でやっているため、連携アカウントの制限あり。アクセス必要な場合は管理者に問い合わせる。
+- GitHubと連携済み。`main`ブランチにマージするとそのまま公開されるので注意。
+  - プルリクあげるだけでプレビューページが出来上がる。
+- microCMSの設定もされているが、2025/05現在、使用していない。
