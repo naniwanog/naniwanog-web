@@ -1,24 +1,52 @@
 {
   "name": "naniwanog-web",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "preinstall": "npx only-allow npm",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "lint-staged": "lint-staged",
+    "format": "prettier --write .",
+    "prepare": "husky",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev",
+    "deploy": "npm run pages:build && wrangler pages deploy"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.8"
+    "@headlessui/react": "^2.2.3",
+    "@heroicons/react": "^2.2.0",
+    "@tailwindcss/postcss": "^4.1.7",
+    "next": "15.3.2",
+    "postcss": "^8.5.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "tailwindcss": "^4.1.7"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.8"
-  }
+    "@cloudflare/next-on-pages": "^1.13.12",
+    "@types/node": "^22.15.18",
+    "@types/react": "19.1.4",
+    "@types/react-dom": "19.1.5",
+    "eslint": "^9.27.0",
+    "eslint-config-next": "15.3.2",
+    "eslint-config-prettier": "^10.1.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "typescript": "^5.8.3"
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "npm run lint",
+      "npm run format",
+      "npm run lint:fix",
+      "npm run format"
+    ]
+  },
+  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
 }
