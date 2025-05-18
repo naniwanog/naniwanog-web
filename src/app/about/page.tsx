@@ -2,7 +2,7 @@ import Container from "@/components/Container";
 import { List, ListItem } from "@/components/List";
 
 export default function Page() {
-    const title = "Naniwa NOG とは"
+    const title = "NaniwaNOG とは"
     const description = (
         <>
             インターネットにおける技術的事項を議論・検討・紹介することで、
@@ -24,7 +24,7 @@ export default function Page() {
         },
         {
             title: "スポンサー",
-            description: "多くのスポンサー様のご支援により、Naniwa NOG の各種活動やプログラムが実現しています! 改めて心より感謝申し上げます。"
+            description: "多くのスポンサー様のご支援により、NaniwaNOG の各種活動やプログラムが実現しています! 改めて心より感謝申し上げます。"
         },
         {
             title: "NOC (Team Shirankedo)",
@@ -34,7 +34,7 @@ export default function Page() {
 
     const content = <>
         <h2 className="mt-16 text-pretty text-3xl font-semibold tracking-tight text-gray-900">
-            Naniwa NOG の特徴
+            NaniwaNOG の特徴
         </h2>
         <List list={listItems} />
     </>
