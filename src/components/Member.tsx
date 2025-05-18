@@ -1,4 +1,5 @@
 import { UserCircleIcon } from "@heroicons/react/20/solid"
+import Image from "next/image"
 
 export type Person = {
     name: string
@@ -28,7 +29,7 @@ export default function Member({ people }: Props) {
                     {people.map((person) => (
                         <li key={person.name}>
                             {person.image ?
-                                <img alt={person.name} src={person.image} className="mx-auto size-24 rounded-full" /> :
+                                <Image alt={person.name} src={person.image} className="mx-auto size-24 rounded-full" /> :
                                 <UserCircleIcon className="mx-auto size-24 rounded-full text-gray-300" />
                             }
                             <h3 className="mt-6 text-base/7 font-semibold tracking-tight text-gray-900">{person.name}</h3>
