@@ -26,7 +26,7 @@ export default function Home() {
                 <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
                   インターネットにおける技術的事項を議論・検討・紹介することで、
                   <span className='text-yellow-600'>関西地域</span>のネットワーク運用者および利用者に貢献することを目的とします。
-                  そのための場として、年1回一堂に会するミーティングを開催しています。
+                  そのための場として、年1回のミーティングを開催しています。
                 </p>
                 <div className="mt-10 flex items-center gap-x-6">
                   <Link
