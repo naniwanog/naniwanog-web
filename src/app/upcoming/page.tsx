@@ -1,4 +1,9 @@
 import Container from "@/components/Container";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "次回開催"
+}
 
 export default function Page() {
     const title = "NaniwaNOG 3 開催概要"

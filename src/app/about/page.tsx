@@ -1,5 +1,10 @@
 import Container from "@/components/Container";
 import { List, ListItem } from "@/components/List";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "概要"
+}
 
 export default function Page() {
     const title = "NaniwaNOG とは"
