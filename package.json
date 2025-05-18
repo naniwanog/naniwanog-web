@@ -1,6 +1,6 @@
 {
   "name": "naniwanog-web",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow npm",
@@ -11,7 +11,10 @@
     "lint:fix": "next lint --fix",
     "lint-staged": "lint-staged",
     "format": "prettier --write .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev",
+    "deploy": "npm run pages:build && wrangler pages deploy"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.3",
@@ -24,6 +27,7 @@
     "tailwindcss": "^4.1.7"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.12",
     "@types/node": "^22.15.18",
     "@types/react": "19.1.4",
     "@types/react-dom": "19.1.5",
