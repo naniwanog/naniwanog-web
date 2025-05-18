@@ -12,7 +12,7 @@ const navigation = [
     { name: '次回開催', href: 'upcoming' },
     { name: '過去の開催', href: 'last' },
     { name: 'スタッフ', href: 'staff' },
-    { name: 'Shirankedo', href: 'shirankedo' },
+    // { name: 'Shirankedo', href: 'shirankedo' },
 ]
 
 export default function Header() {
