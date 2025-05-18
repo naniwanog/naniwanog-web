@@ -14,13 +14,13 @@ export default function Container({ title, description, description2, children }
                 <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
                     {title}
                 </h1>
-                <p className="mt-6 text-xl/8">
+                <div className="mt-6 text-xl/8">
                     {description}
-                </p>
+                </div>
                 <div className="mt-10 max-w-full">
-                    <p>
+                    <div>
                         {description2}
-                    </p>
+                    </div>
                     {children}
                 </div>
             </div>
