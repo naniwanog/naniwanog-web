@@ -46,7 +46,7 @@ export default function Home() {
             alt="naniwa top"
             width={3465}
             height={1795}
-            className="aspect-[3/2] object-cover lg:aspect-auto lg:size-full blur-xs"
+            className="aspect-[3/2] object-cover lg:aspect-auto lg:size-full"
           />
         </div>
       </div>
