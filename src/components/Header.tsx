@@ -25,7 +25,7 @@ export default function Header() {
             } inset-x-0 pb-6 top-0 z-50 bg-orange-100/70 backdrop-blur`}>
 
             {/* For PC */}
-            <div className="mx-auto max-w-7xl">
+            <div className="mx-auto min-w-80% w-[90%]">
                 <div className="px-6 pt-6 lg:max-w-2xl lg:pl-8 lg:pr-0">
                     <nav aria-label="Global" className="flex items-center justify-between lg:justify-start">
                         <NaniwaNogIcon />

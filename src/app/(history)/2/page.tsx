@@ -81,13 +81,13 @@ export default function NaniwaNOG2Page() {
         title={title}
         description={description}
       >
-        <div className="min-w-full">
+        <div className="py-6">
+          <TimeTable items={timeTableItems} />
+        </div>
+        <div className="pt-6">
           <SponsorTable items={sponsors} />
         </div>
       </Container>
-      <div className="py-8">
-        <TimeTable items={timeTableItems} />
-      </div>
     </ >
   )
 }
