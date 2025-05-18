@@ -30,7 +30,7 @@ export default function Home() {
                 </p>
                 <div className="mt-10 flex items-center gap-x-6">
                   <Link
-                    href="next"
+                    href="upcoming"
                     className="rounded-md bg-yellow-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
                   >
                     次回開催概要 <span aria-hidden="true">&rarr;</span>
