@@ -16,7 +16,7 @@ const people: Person[] = [
     { name: '佐藤 太一', company: '株式会社MIXI' },
     { name: '塩野 由依', company: '豊橋技術科学大学' },
     { name: '清水 貴史', company: '株式会社ZTV' },
-    { name: '白石 敦', company: '株式会社ネットアイアールディー' },
+    { name: '白石 敦', company: 'GMOネットアイアールディー株式会社' },
     { name: '高橋 数史', company: 'エヌ・ティ・ティ・スマートコネクト株式会社' },
     { name: '田村 敏彦', company: '株式会社ZTV' },
     { name: '中井 義久', company: '株式会社オプテージ' },
