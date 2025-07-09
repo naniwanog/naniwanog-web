@@ -26,7 +26,7 @@ export default function Page() {
             <br />
             <p>🗓 プログラムの公開・レジスト開始は<a href="https://peatix.com/event/4470817/" target="_blank">こちら</a>から</p>
             <p>今回も、いつもの若者セッションのほか、様々な面白いセッションを準備中です。</p>
-            <p>最新情報は各種SNSやSlackで随時お知らせしますので、ぜひチェックしてください！</p>
+            <p>最新情報は各種SNSやSlackで随時お知らせしますのでチェックしてください！</p>
         </>
     )
 
